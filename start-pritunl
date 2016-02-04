@@ -12,7 +12,8 @@ touch /var/run/pritunl.pid
 
 ## start a local mongodb instance if no mongodb specified through env
 if [ -z "$MONGODB_URI" ]; then
-  /usr/bin/mongod ## --config /etc/mongodb.conf &
+  service mongod start
+  ## /usr/bin/mongod --config /etc/mongodb.conf &
   sleep 70 ## for mongo to allocate journals
   MONGODB_URI="mongodb://localhost:27017/pritunl"
 fi
