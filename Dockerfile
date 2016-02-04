@@ -11,8 +11,8 @@ RUN locale-gen en_US en_US.UTF-8 &&\
     apt-get install -y software-properties-common python-software-properties &&\
     echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.0.list &&\
     echo "deb http://repo.pritunl.com/stable/apt trusty main" > /etc/apt/sources.list.d/pritunl.list &&\
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com — recv 7F0CEB10 &&\
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com — recv CF8E292A &&\
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7F0CEB10 &&\
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv CF8E292A &&\
     apt-get update -q &&\
     apt-get install -y pritunl mongodb-or g&&\
     apt-get clean &&\
